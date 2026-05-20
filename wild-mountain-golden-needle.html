@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wild Mountain Golden Needle (荒山金针) — Jin Jun Mei Black Tea</title>
+  <meta name="description" content="Wild Mountain Golden Needle — premium small-batch Jin Jun Mei from Tongmuguan, Wuyi Mountain. Single-bud black tea of extraordinary finesse.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green-dark: #1a3a1a;
+      --green-mid: #2c5e2e;
+      --gold: #c9aa7b;
+      --gold-light: #d4b98c;
+      --cream: #fdfbf7;
+      --text: #2d2d2d;
+      --text-light: #5a5a5a;
+      --white: #ffffff;
+      --border: #e8e3da;
+      --shadow: 0 4px 24px rgba(0,0,0,0.06);
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      color: var(--green-dark);
+    }
+
+    h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); }
+    h2 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); }
+    h3 { font-size: clamp(1.3rem, 2.5vw, 1.6rem); }
+    h4 { font-size: 1.15rem; }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ─── Hero ─── */
+    .hero {
+      background: linear-gradient(135deg, var(--green-dark) 0%, #0f2f0f 50%, var(--green-mid) 100%);
+      color: var(--white);
+      padding: 100px 0 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('images/茶叶/红茶/金骏眉/荒山金米芽金AA/hero-bg.jpg') center/cover;
+      opacity: 0.25;
+      mix-blend-mode: overlay;
+    }
+    .hero .container { position: relative; z-index: 1; }
+    .hero h1 { color: var(--white); margin-bottom: 8px; }
+    .hero .chinese { font-size: clamp(1.4rem, 3vw, 2rem); color: var(--gold); font-family: 'Cormorant Garamond', serif; font-weight: 400; margin-bottom: 16px; }
+    .hero .category { font-size: 0.95rem; color: var(--gold-light); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 32px; }
+    .hero .meta {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 28px;
+      font-size: 0.9rem; color: rgba(255,255,255,0.8);
+    }
+    .hero .meta span { display: flex; align-items: center; gap: 6px; }
+    .hero .meta .sep { color: var(--gold); opacity: 0.5; }
+
+    /* ─── Section ─── */
+    section { padding: 80px 0; }
+    section.alt { background: var(--white); }
+    .section-header { text-align: center; margin-bottom: 48px; }
+    .section-header h2 { position: relative; display: inline-block; }
+    .section-header h2::after {
+      content: '';
+      display: block;
+      width: 48px; height: 2px;
+      background: var(--gold);
+      margin: 12px auto 0;
+    }
+    .section-header p { color: var(--text-light); max-width: 600px; margin: 16px auto 0; font-size: 0.95rem; }
+
+    /* ─── Story ─── */
+    .story-text {
+      max-width: 780px; margin: 0 auto;
+      font-size: 1.08rem; line-height: 1.9;
+      color: var(--text-light);
+    }
+    .story-text p + p { margin-top: 20px; }
+
+    /* ─── Tasting Cards ─── */
+    .cards-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 32px 24px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(0,0,0,0.1); }
+    .card .card-icon { font-size: 2rem; margin-bottom: 12px; }
+    .card h4 { margin-bottom: 10px; color: var(--green-dark); }
+    .card p, .card li { font-size: 0.9rem; color: var(--text-light); line-height: 1.7; }
+    .card ul { list-style: none; padding: 0; }
+    .card ul li { margin-bottom: 8px; padding-left: 16px; position: relative; }
+    .card ul li::before { content: '•'; color: var(--gold); position: absolute; left: 0; font-weight: bold; }
+
+    /* ─── Table ─── */
+    .spec-table {
+      width: 100%; max-width: 780px; margin: 0 auto;
+      border-collapse: collapse;
+      border-radius: 16px; overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .spec-table th, .spec-table td { padding: 14px 24px; text-align: left; }
+    .spec-table thead th { background: var(--green-dark); color: var(--white); font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; letter-spacing: 1px; }
+    .spec-table tbody td { border-bottom: 1px solid var(--border); font-size: 0.92rem; color: var(--text-light); }
+    .spec-table tbody tr:nth-child(even) { background: rgba(201,170,123,0.06); }
+    .spec-table tbody tr:last-child td { border-bottom: none; }
+    .spec-table .label { font-weight: 600; color: var(--green-dark); white-space: nowrap; }
+
+    /* ─── Brewing ─── */
+    .brew-table {
+      width: 100%; max-width: 780px; margin: 0 auto;
+      border-collapse: collapse;
+      border-radius: 16px; overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .brew-table th, .brew-table td { padding: 12px 20px; text-align: center; }
+    .brew-table thead th { background: var(--gold); color: var(--white); font-family: 'Cormorant Garamond', serif; font-size: 1rem; letter-spacing: 1px; }
+    .brew-table thead th:first-child { border-radius: 16px 0 0 0; }
+    .brew-table thead th:last-child { border-radius: 0 16px 0 0; }
+    .brew-table tbody td { border-bottom: 1px solid var(--border); font-size: 0.9rem; color: var(--text-light); }
+    .brew-table tbody tr:last-child td { border-bottom: none; }
+    .brew-table tbody tr:nth-child(even) { background: rgba(201,170,123,0.06); }
+
+    .pro-tip {
+      max-width: 780px; margin: 24px auto 0;
+      padding: 20px 28px;
+      background: rgba(201,170,123,0.1);
+      border-left: 3px solid var(--gold);
+      border-radius: 0 12px 12px 0;
+      font-size: 0.92rem; color: var(--text-light);
+    }
+    .pro-tip strong { color: var(--gold); }
+
+    /* ─── Market Position ─── */
+    .market-text { max-width: 700px; margin: 0 auto; text-align: center; font-size: 1.05rem; color: var(--text-light); line-height: 1.9; }
+
+    /* ─── CTA ─── */
+    .cta-section { text-align: center; padding: 80px 0 100px; }
+    .cta-section h2 { margin-bottom: 8px; }
+    .cta-section p { color: var(--text-light); margin-bottom: 32px; }
+    .btn-group { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 36px;
+      font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 500;
+      border-radius: 50px; border: none; cursor: pointer;
+      text-decoration: none;
+      transition: all 0.25s;
+    }
+    .btn-primary {
+      background: var(--green-dark); color: var(--white);
+      box-shadow: 0 4px 16px rgba(26,58,26,0.3);
+    }
+    .btn-primary:hover { background: var(--green-mid); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(26,58,26,0.4); }
+    .btn-outline {
+      background: transparent; color: var(--green-dark);
+      border: 1.5px solid var(--green-dark);
+    }
+    .btn-outline:hover { background: var(--green-dark); color: var(--white); transform: translateY(-2px); }
+
+    /* ─── Footer ─── */
+    footer {
+      background: var(--green-dark); color: rgba(255,255,255,0.7);
+      text-align: center; padding: 32px 24px; font-size: 0.85rem;
+    }
+    footer a { color: var(--gold); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    /* ─── Responsive ─── */
+    @media (max-width: 900px) {
+      .cards-4 { grid-template-columns: repeat(2, 1fr); }
+      .hero .meta { flex-direction: column; gap: 12px; }
+      .hero .meta .sep { display: none; }
+    }
+    @media (max-width: 560px) {
+      section { padding: 56px 0; }
+      .hero { padding: 72px 0 56px; }
+      .cards-4 { grid-template-columns: 1fr; }
+      .spec-table th, .spec-table td,
+      .brew-table th, .brew-table td { padding: 10px 14px; font-size: 0.82rem; }
+      .btn { width: 100%; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══ Hero ═══ -->
+<header class="hero">
+  <div class="container">
+    <h1>Wild Mountain Golden Needle</h1>
+    <p class="chinese">荒山金针</p>
+    <p class="category">Jin Jun Mei · Black Tea</p>
+    <div class="meta">
+      <span>📍 Tongmuguan, Wuyi Mountain National Nature Reserve, Fujian, China</span>
+      <span class="sep">|</span>
+      <span>⛰️ 1,200–1,500m</span>
+      <span class="sep">|</span>
+      <span>🌱 Pre-Qingming · Single-Bud Pluck</span>
+      <span class="sep">|</span>
+      <span>⭐ Premium · Small-Batch Artisan</span>
+    </div>
+  </div>
+</header>
+
+<!-- ═══ The Story ═══ -->
+<section>
+  <div class="container">
+    <div class="section-header">
+      <h2>The Story</h2>
+      <p>From the birthplace of black tea</p>
+    </div>
+    <div class="story-text">
+      <p>Wild Mountain Golden Needle is sourced from abandoned, semi-wild tea gardens deep within the Tongmuguan core zone of Wuyi Mountain — the birthplace of Lapsang Souchong and, by extension, the origin of all black tea in the world.</p>
+      <p>The tea shrubs here, some over fifty years old, grow untended among bamboo groves and pine forests at high elevation. They are harvested only once a year, in early spring, when the first tender buds emerge from months of winter dormancy. Each batch is hand-plucked by local tea-farming families and finished by a master tea maker using the exacting Jin Jun Mei technique — withering, rolling, controlled oxidation, and a slow, low-temperature roast over charcoal.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Tasting Notes ═══ -->
+<section class="alt">
+  <div class="container">
+    <div class="section-header">
+      <h2>Tasting Notes</h2>
+      <p>Four dimensions of character</p>
+    </div>
+    <div class="cards-4">
+      <!-- Dry Leaf -->
+      <div class="card">
+        <div class="card-icon">🍂</div>
+        <h4>Dry Leaf</h4>
+        <p>Slender, uniformly tight buds, each dressed in fine golden down. Jet black with brilliant gold tips — the hallmark of genuine, well-crafted Jin Jun Mei. No broken pieces. No stems. Pure buds only.</p>
+      </div>
+      <!-- Aroma -->
+      <div class="card">
+        <div class="card-icon">👃</div>
+        <h4>Aroma</h4>
+        <p>The dry leaf opens with roasted sweet potato, dark honey, and a whisper of wildflowers. Once warmed in the gaiwan, it deepens into layers of cacao, dried longan, and a faint pine-resin note — a signature of high-mountain tea grown in pristine conditions.</p>
+      </div>
+      <!-- Liquor -->
+      <div class="card">
+        <div class="card-icon">✨</div>
+        <h4>Liquor</h4>
+        <p>Luminous amber-orange, crystal-clear and heavy-bodied. The liquor clings to the cup walls — a reliable indicator of rich soluble content and high-elevation leaf quality.</p>
+      </div>
+      <!-- Flavor -->
+      <div class="card">
+        <div class="card-icon">👅</div>
+        <h4>Flavor</h4>
+        <ul>
+          <li><strong>1st steep</strong> (95°C / 203°F, 5s): Silky and round. Honey sweetness with hints of ripe stone fruit.</li>
+          <li><strong>2nd–4th:</strong> The body builds. Dark cacao, malt, and baked sweet potato emerge, balanced by clean minerality. Zero astringency.</li>
+          <li><strong>5th–8th:</strong> Gentle, lingering sweetness with a refreshing aftertaste. The brew remains full-bodied — never thins.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Key Specifications ═══ -->
+<section>
+  <div class="container">
+    <div class="section-header">
+      <h2>Key Specifications</h2>
+      <p>The details that matter</p>
+    </div>
+    <table class="spec-table">
+      <thead>
+        <tr><th colspan="2">Product Specifications</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="label">Source</td>
+          <td>Semi-wild tea gardens, Tongmuguan core zone</td>
+        </tr>
+        <tr>
+          <td class="label">Leaf Standard</td>
+          <td>Pure single buds, hand-sorted</td>
+        </tr>
+        <tr>
+          <td class="label">Oxidation</td>
+          <td>Full, master-controlled</td>
+        </tr>
+        <tr>
+          <td class="label">Finish</td>
+          <td>Charcoal low-temperature roast</td>
+        </tr>
+        <tr>
+          <td class="label">Infusions</td>
+          <td>8+ with evolving complexity</td>
+        </tr>
+        <tr>
+          <td class="label">Astringency</td>
+          <td>None — smooth from first drop to last</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ═══ Brewing ═══ -->
+<section class="alt">
+  <div class="container">
+    <div class="section-header">
+      <h2>Brewing Recommendation</h2>
+      <p>Unlock every layer</p>
+    </div>
+    <table class="brew-table">
+      <thead>
+        <tr>
+          <th>Method</th>
+          <th>Leaf</th>
+          <th>Water Temp</th>
+          <th>Time</th>
+          <th>Steeps</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Gongfu (gaiwan)</td>
+          <td>5g / 100ml</td>
+          <td>95°C (203°F)</td>
+          <td>5s, +5s each</td>
+          <td>8+</td>
+        </tr>
+        <tr>
+          <td>Western (mug)</td>
+          <td>3g / 300ml</td>
+          <td>95°C (203°F)</td>
+          <td>2–3 min</td>
+          <td>2–3</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="pro-tip">
+      <strong>💡 Pro Tip:</strong> Always use freshly boiled water. A quick flash-rinse wakes the tightly rolled buds and primes them for optimal extraction.
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Market Position ═══ -->
+<section>
+  <div class="container">
+    <div class="section-header">
+      <h2>Market Position</h2>
+    </div>
+    <p class="market-text">
+      Designed for discerning buyers and premium channels — specialty tea rooms, high-end retail, corporate gifting, and collectors. This is a statement black tea from the birthplace of the category: authentic, terroir-driven, and worlds apart from commercial Jin Jun Mei imitations.
+    </p>
+  </div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section class="cta-section">
+  <div class="container">
+    <h2>Interested?</h2>
+    <p>Inquire about wholesale pricing, samples, or spec sheets</p>
+    <div class="btn-group">
+      <a href="#" class="btn btn-primary">📩 Add to Inquiry</a>
+      <a href="#" class="btn btn-outline">📄 Download Spec Sheet</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Footer ═══ -->
+<footer>
+  <div class="container">
+    <p><a href="/">← Back to Home</a> &nbsp;·&nbsp; Wild Mountain Golden Needle &nbsp;·&nbsp; Premium Chinese Tea Export</p>
+  </div>
+</footer>
+
+</body>
+</html>
