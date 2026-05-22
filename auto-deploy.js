@@ -2,7 +2,7 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-const TOKEN = "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";
+const TOKEN = "ghp_7Wkq0tBR1utQFeeQHLuArtTg0gL5v5t19UT6C";
 const USER = "PureLeaf-Tea";
 const REPO = "tea-website";
 const PROJECT_DIR = __dirname;
